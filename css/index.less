@@ -1,0 +1,251 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+h1, h2, p, div {
+	margin: 0;
+	padding: 0;
+}
+header {
+	width: 10rem;
+	position: relative;
+	nav {
+		display: -webkit-flex;
+  		display: flex;
+  		flex-direction: row;
+  		justify-content: center;
+  		box-shadow: 1px 1px 6px #bebebe;
+	}
+	.choose-song-nav {
+		width: 200/64rem;
+	}
+	.song-list-nav {
+		width: 40%;
+	}
+	.user-nav {
+		width: 200/64rem;
+	}
+	#moveLine {
+		width: 138/64rem;
+		height: 3px;
+		background: #d43c33;
+		position: absolute;
+		left: 32/64rem;
+		bottom: 0;
+	}
+	.header-nav {
+		height: 88/64rem;
+		line-height: 88/64rem;
+		text-align: center;
+		font-size: 18px;
+		color: #333;
+	}
+	#action {
+		color: #cc544d;
+	}
+}
+[data-dpr='2'] .header-nav {
+	font-size: 36px;
+}
+[data-dpr='3'] .header-nav {
+	font-size: 54px;
+}
+#container {
+	width: 10rem;
+	-webkit-overflow-scrolling: touch;
+	position: relative;
+	overflow: hidden;
+	.content {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		overflow-y: scroll;
+	}
+	#chooseSong {
+		-webkit-transform: translate3d(0,0,0);
+	}
+	#songList {
+		-webkit-transform: translate3d(100%,0,0);
+	}
+	#user {
+		-webkit-transform: translate3d(200%,0,0);
+	}
+}
+#chooseSong {
+	.top-line {
+		margin-top: 2px;
+		width: 100%;
+		height: 20/64rem;
+		background: #f6f6f6;
+	}
+	article {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 24/64rem 32/64rem 0 32/64rem;
+  		border-bottom: 24/64rem solid #f6f6f6;
+		.notice-page {
+			color: #cc544d;
+			font-weight: normal;
+			font-size: 18px;
+			float: left;
+		}
+		.article-time {
+			color: #999999;
+			font-size: 16px;
+			float: right;
+		}
+		.time {
+			.article-time;
+			margin-top: 60/64rem;
+		}
+		.notice-content {
+			color: #666666;
+			font-size: 16px;
+			line-height: 26px;
+			clear: both;
+			text-indent: 20px;
+			margin-top: 50/64rem;
+		}
+		.user-outer {
+			width: 100%;
+			padding-bottom: 20/64rem;
+			border-bottom: 1px solid #e0e0e0;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+		.to-who {
+			margin-top: 36/64rem;
+			font-size: 18px;
+			color: #333;
+		}
+		.detail-content {
+			.notice-content;
+			text-indent: 0px;
+			margin-top: 28/64rem;
+		}
+		.user-inf {
+			width: 297/64rem;
+			height: 133/64rem;
+			float: left;
+		}
+		.song-name {
+			color: #333;
+			font-size: 20px;
+			margin-bottom: 20/64rem;
+		}
+		.user-img {
+			width: 70/64rem;
+			height: 70/64rem;
+			border-radius: 100%;
+			float: left;
+		}
+		.user-name {
+			font-size: 16px;
+			color: #a1a1a1;
+			margin: 18/64rem 0 0 16/64rem;
+			float: left;
+		}
+		.want-listen {
+			width: 146/64rem;
+			height: 54/64rem;
+			border: 1px solid #666;
+			border-radius: 6px;
+			text-align: center;
+			font-size: 16px;
+			line-height: 54/64rem;
+			color: #666;
+			float: right;
+			margin: 22/64rem 0;
+		}
+		&::after {
+			content: '';
+			display: block;
+			width: 10rem;
+			height: 1px;
+  			box-shadow: 1px 1px 1px #bebebe;
+			margin: 24/64rem 0 0 -32/64rem;
+			clear: both;
+		}
+	}
+}
+.request-music {
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+	position: fixed;
+	bottom: 30/64rem;
+	left: 30/64rem;
+	display: block;
+	width: 110/64rem;
+	height: 110/64rem;
+	line-height: 110/64rem;
+	border-radius: 100%;
+	background: #d54d45;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+  	box-shadow: 1px 4px 6px #a68e8c;
+}
+[data-dpr='2'] .notice-page {
+	font-size: 36px !important;
+}
+[data-dpr='3'] .notice-page {
+	font-size: 54px !important;
+}
+
+[data-dpr='2'] .article-time {
+	font-size: 32px !important;
+}
+[data-dpr='3'] .article-time {
+	font-size: 48px !important;
+}
+[data-dpr='2'] .song-name {
+	font-size: 40px !important;
+}
+[data-dpr='3'] .song-name {
+	font-size: 60px !important;
+}
+[data-dpr='2'] .user-name {
+	font-size: 32px !important;
+}
+[data-dpr='3'] .user-name {
+	font-size: 48px !important;
+}
+[data-dpr='2'] .to-who {
+	font-size: 36px !important;
+}
+[data-dpr='3'] .to-who {
+	font-size: 54px !important;
+}
+[data-dpr='2'] .want-listen {
+	font-size: 32px !important;
+}
+[data-dpr='3'] .want-listen {
+	font-size: 48px !important;
+}
+[data-dpr='2'] .request-music {
+	font-size: 32px !important;
+}
+[data-dpr='3'] .request-music {
+	font-size: 48px !important;
+}
+[data-dpr='2'] .notice-content {
+	font-size: 32px !important;
+	line-height: 50px !important;
+	text-indent: 26px !important;
+}
+[data-dpr='3'] .notice-content {
+	font-size: 48px !important;
+	line-height: 80px !important;
+}
+[data-dpr='2'] .detail-content {
+	font-size: 32px !important;
+	line-height: 50px !important
+}
+[data-dpr='3'] .detail-content {
+	font-size: 48px !important;
+	line-height: 80px !important;
+}
